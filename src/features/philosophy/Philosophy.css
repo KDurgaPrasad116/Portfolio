@@ -1,0 +1,158 @@
+.philosophy-section {
+  padding: 120px 0;
+  background-color: var(--bg-black);
+  border-top: 1px solid var(--border-subtle);
+  position: relative;
+}
+
+.philosophy-header {
+  margin-bottom: 56px;
+}
+
+.philosophy-title {
+  font-family: var(--font-sans);
+  font-size: clamp(34px, 4.5vw, 56px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin-bottom: 12px;
+}
+
+.philosophy-subtitle {
+  font-size: 16px;
+  color: var(--text-muted);
+  max-width: 680px;
+}
+
+/* Tabs & Display Container */
+.phases-tabs-container {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 32px;
+  background: #090909;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.phases-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-right: 1px solid var(--border-subtle);
+  padding-right: 28px;
+}
+
+.phase-tab-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.phase-tab-btn:hover {
+  background: #141414;
+}
+
+.phase-tab-btn.is-active {
+  background: #161616;
+  border-color: var(--border-highlight);
+}
+
+.tab-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+.tab-name {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.phase-tab-btn.is-active .tab-name {
+  color: var(--accent-red);
+}
+
+/* Active Display Box */
+.phase-card-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+}
+
+.phase-active-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.phase-display-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.phase-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(244, 72, 73, 0.1);
+  color: var(--accent-red);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.phase-big-number {
+  font-family: var(--font-mono);
+  font-size: 40px;
+  font-weight: 700;
+  color: #1a1a1a;
+  user-select: none;
+}
+
+.phase-active-name {
+  font-family: var(--font-sans);
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.phase-active-description {
+  font-size: 17px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 680px;
+}
+
+@media (max-width: 800px) {
+  .phases-tabs-container {
+    grid-template-columns: 1fr;
+  }
+  .phases-nav {
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+    padding-right: 0;
+    padding-bottom: 20px;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .phase-tab-btn {
+    flex-shrink: 0;
+  }
+}

@@ -1,0 +1,189 @@
+/* ===================================================================
+   Aditya Raj Style System - Dark Editorial Minimalist Aesthetic
+   Inspired by: https://portfolio-mti1.vercel.app
+   =================================================================== */
+
+:root {
+  /* Color Palette - Obsidian Crimson & Ember Editorial */
+  --bg-black: #060608;
+  --bg-card: #0d0d11;
+  --bg-card-secondary: #14141a;
+  --bg-subtle: #111116;
+  --bg-glass: rgba(13, 13, 17, 0.72);
+  --border-subtle: #202028;
+  --border-dim: #181820;
+  --border-highlight: #353545;
+  --border-accent: rgba(244, 72, 73, 0.35);
+  
+  --text-primary: #f5f4f2;
+  --text-muted: #9c9a96;
+  --text-dim: #5c5a58;
+  --text-dark: #3a3937;
+
+  /* Obsidian Crimson & Ember Accents */
+  --accent-red: #ff3838;
+  --accent-crimson: #eb2f45;
+  --accent-orange: #ff5e36;
+  --accent-amber: #ff9142;
+  --accent-orange-glow: rgba(255, 94, 54, 0.22);
+  --accent-red-glow: rgba(255, 56, 56, 0.28);
+  --accent-gradient: linear-gradient(135deg, #ff3838 0%, #ff6b3d 100%);
+
+  /* Fonts */
+  --font-mono: 'JetBrains Mono', 'GT Flexa Mono', monospace;
+  --font-sans: 'Geist', 'Suisse Int\'l', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  --font-display: 'Space Grotesk', 'Geist', sans-serif;
+
+  /* Layout */
+  --site-max-width: 1360px;
+  --site-padding: clamp(20px, 4vw, 56px);
+  --header-height: 72px;
+
+  /* Transitions */
+  --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.18s ease;
+  --transition-smooth: 0.4s var(--ease-editorial);
+}
+
+/* Base Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--bg-black);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-black);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: var(--accent-red);
+  color: #ffffff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-black);
+}
+::-webkit-scrollbar-thumb {
+  background: #252530;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-red);
+}
+
+/* Typography Utility */
+.font-mono {
+  font-family: var(--font-mono);
+  letter-spacing: -0.01em;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Section Tag Pill: e.g. [ 02 / 09 ] SKILLS */
+.section-tag-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.section-tag-number {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  background: #0d0d12;
+  border: 1px solid var(--border-subtle);
+  padding: 4px 10px;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.section-tag-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--accent-red);
+  text-transform: uppercase;
+  text-shadow: 0 0 20px var(--accent-red-glow);
+}
+
+/* Red / Dark Editorial Accents */
+.accent-badge {
+  background: var(--accent-gradient);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 4px 8px;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 10px var(--accent-red-glow);
+}
+
+/* Gradient Headline Text: Refined luminous gradient */
+.headline-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #d8d6d2 45%, #92908c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Global Container */
+.container {
+  max-width: var(--site-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--site-padding);
+  padding-right: var(--site-padding);
+  width: 100%;
+}
+
+/* Subtle Grid Backgrounds & Lines */
+.editorial-border-top {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.editorial-border-bottom {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Button & Link reset */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  color: inherit;
+}

@@ -1,0 +1,83 @@
+.premium-btn {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+  padding: 12px 28px;
+  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  z-index: 1;
+}
+
+.premium-btn:active {
+  transform: scale(0.98) translateY(0);
+}
+
+.premium-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.btn-content {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Primary Button Style */
+.btn-primary {
+  background: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 4px 14px var(--accent-light);
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: scale(1.03) translateY(-2px);
+  box-shadow: 0 8px 20px var(--accent-glow);
+}
+
+/* Secondary Button Style */
+.btn-secondary {
+  background: var(--bg-glass);
+  color: var(--text-primary);
+  border-color: var(--border-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-secondary);
+  border-color: var(--accent);
+  transform: scale(1.03) translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='espresso'] .btn-secondary:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Text / Link Button Style */
+.btn-text {
+  background: transparent;
+  color: var(--accent);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+}
+
+.btn-text:hover {
+  color: var(--accent-hover);
+  background: var(--accent-light);
+  transform: translateY(-1px);
+}

@@ -1,0 +1,87 @@
+.craft-section {
+  padding: 120px 0;
+  background-color: var(--bg-black);
+  border-top: 1px solid var(--border-subtle);
+  position: relative;
+}
+
+.craft-header {
+  max-width: 860px;
+  margin-bottom: 56px;
+}
+
+.craft-title {
+  font-family: var(--font-sans);
+  font-size: clamp(36px, 5.5vw, 68px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  margin-bottom: 16px;
+}
+
+.craft-quote {
+  font-size: 15px;
+  color: var(--accent-red);
+  letter-spacing: 0.04em;
+}
+
+.craft-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.craft-card {
+  background: #090909;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-fast);
+}
+
+.craft-card:hover {
+  border-color: var(--border-highlight);
+  transform: translateY(-4px);
+  background: #0d0d0d;
+}
+
+.craft-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.craft-code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent-red);
+  font-weight: 600;
+}
+
+.craft-icon {
+  color: var(--text-dim);
+}
+
+.craft-pillar-title {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+
+.craft-pillar-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .craft-grid {
+    grid-template-columns: 1fr;
+  }
+}
